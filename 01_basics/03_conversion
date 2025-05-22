@@ -1,11 +1,21 @@
 let number = undefined
 let alpha = null
 // console.log(typeof number)
-console.log(typeof alpha);
+// console.log(typeof alpha);
 let alpha1 = Boolean(alpha)
-console.log(alpha1);
+// console.log(alpha1);
 
 let number1 = Number(number)
 // console.log(number1);
-console.log(2/3);
-console.log(2**3);
+// console.log(2/3);
+// console.log(2**3);
+let str1 = "Hello"
+let str2 = " World"
+// console.log(str1 + str2);
+let y = 1
+const x = y++
+console.log(`y:${y} , x:${x}`);
+let y1 = 2
+const x1 = ++y1
+console.log(`y1:${y1}, x1:${x1}`);
+
