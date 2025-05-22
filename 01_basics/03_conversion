@@ -1,0 +1,9 @@
+let number = undefined
+let alpha = null
+// console.log(typeof number)
+console.log(typeof alpha);
+let alpha1 = Boolean(alpha)
+console.log(alpha1);
+
+let number1 = Number(number)
+// console.log(number1);
