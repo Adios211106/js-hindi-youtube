@@ -7,3 +7,5 @@ console.log(alpha1);
 
 let number1 = Number(number)
 // console.log(number1);
+console.log(2/3);
+console.log(2**3);
