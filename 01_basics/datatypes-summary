@@ -26,5 +26,26 @@ console.log(typeof (BigNum))
       console.log("Hello" + " world"); 
      }
      console.table([MyObj, typeof(MyObj), typeof(F1)]);
+F1();
+
+// https://262.ecma-international.org/5.1#sec-11.4.3
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(For primitive), Heap(For reference) Memories
+
+let n1 = 2
+let n2 = 3
+n1 = n2
+console.log(n1);
+console.log(n2);
+
+let n3 = {
+  email: "Adios@gmail.com",
+}
+n4 = n3
+n4.email = "Trupti@gmail.com"
+console.log(n4.email);
+console.log(n3.email);
 
      
