@@ -1,0 +1,9 @@
+
+// console.log("2" > 1)
+// console.log("2" > null)
+// console.log(null == 0)
+console.log(null <= 0)
+// console.log(undefined === null)
+// console.log(undefined > 0)
+// console.table([undefined == 0, "03" === 3])
+// This type of code is generally avoided for clean code purpose. "====" is used check and compare values along with their datatype.
