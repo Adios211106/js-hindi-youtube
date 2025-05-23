@@ -1,0 +1,30 @@
+/* Primitive (Call by Value, original data is not given, ie the reference of og data is not 
+given but instead a copy is given and changes are made to the copy only.)
+They include 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
+*/
+const Id1 = Symbol('124')
+const Id2 = Symbol('124')
+console.log(Id1 === Id2)
+const BigNum = 25366424473478478748377n
+console.log(typeof (BigNum))
+
+
+  /*  Reference (Non Primitive) (Memory's reference is directly allocated and can be changed)
+    Array, Objects(In JS master this and browser's web events or browser events; then u can master JS),
+    Functions
+    JavaScript is a dynamically typed language, meaning that the data type of a variable is
+     determined at runtime, not when the variable is declared. This differs from statically 
+     typed languages like Java or TypeScript, where you must explicitly declare the 
+     variable's type. */
+
+     const ladiesname = ["Tina", "Sheena", "Kareeena"]
+     const MyObj = {
+      name: "Adios",
+      Rollno: 21,
+     }
+     const F1 = function(){
+      console.log("Hello" + " world"); 
+     }
+     console.table([MyObj, typeof(MyObj), typeof(F1)]);
+
+     
