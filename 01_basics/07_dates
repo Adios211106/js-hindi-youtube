@@ -1,0 +1,36 @@
+let currentDate = new Date()
+// console.log(currentDate)
+// console.log(currentDate.toString())
+// console.log(currentDate.toDateString())
+// console.log(currentDate.toISOString());
+// console.log(currentDate.toLocaleString());
+// console.log(currentDate.toLocaleDateString());
+// console.log(typeof currentDate);
+
+let createdDate1 = new Date(2024, 0, 24) // (Year, Month, Date)
+// console.log(createdDate1.toDateString());
+
+let createdDate2= new Date(2025, 1, 21, 3, 33, 40) // (Year, Month, Date, (3,33,40 gives 3:33:40))
+//console.log(createdDate2.toLocaleString());
+
+let createdDate3 = new Date("2024-1-30") // or "30-1-2024" is fine too same output
+//console.log(createdDate3.toLocaleString());
+
+let Timestamp = Date.now()
+// console.log(Timestamp); // Gives no. of milliseconds occured from 1/1/1970 (Standard defined)
+// console.log(createdDate3.getTime()); // from 1/1/1970 upto that date ms occured
+
+// console.log(Math.floor(Date.now()/1000)); // to convert t secs (floor to remove decimal)
+
+const newDate = new Date()
+console.log(newDate.getDay()); // Sun-Sat is 0-6
+console.log(newDate.getMonth()) // Jan-Dec is 0-11
+console.log(newDate.toLocaleString('default', {
+    weekday: "long"
+    // ctrl+space gives options (at both where weekday is and long is entered) //  
+})) // output: Saturday
+
+
+
+
+
