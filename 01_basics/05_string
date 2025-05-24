@@ -1,0 +1,19 @@
+const name = "Arnav"
+let v1 = "football"
+// console.log(`${name.charAt(-3)} loves playying ${v1}!!!`);
+const gamer = new String('Ninja')
+// console.log(name.at(1))
+// console.log(name.concat(" loves " , v1))
+// console.log(name.endsWith('a', 4));
+// console.log(name.endsWith("nav"));
+// console.log(`The word ${v1} includes ${v1.includes('a') ? "a" : "not a"}`);
+// console.log(name.indexOf("A"));
+// console.log('hello world hello'.indexOf('o', -5));
+// console.log('hello world hello'.indexOf('o', -5));
+const IdNum1 = "1276893"
+const IdNum1sliced = IdNum1.slice(4)
+console.log(`The name is ${name}, Id no. is ${IdNum1sliced.padStart(7, '*')}`);
+
+
+
+

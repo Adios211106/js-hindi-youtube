@@ -1,0 +1,10 @@
+const num1 = 1100.980
+const num2 = new Number(200.9458)
+// console.log(num1);
+// console.log(num2);
+// console.table([typeof(num1), typeof(num2)]);
+console.log(num1.toString().length);
+console.log(num2.toFixed(1));
+console.log(num2.toPrecision(5));
+console.log(num1.toPrecision(3));
+
