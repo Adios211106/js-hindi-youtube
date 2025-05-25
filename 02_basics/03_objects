@@ -1,0 +1,47 @@
+// singleton // obj declared as literals then singleton nahi banta, constructor se banega to singleton banega
+// Object.create // constructor method ke through ise hi bulaya jata hai
+
+// object literals
+
+const mySym1 = Symbol("key1")
+const mySym2 = Symbol("key2")
+ // console.log(mySym1, mySym2);
+
+
+const JsUser = {
+    name: "Hitesh", // name is a key and "Hitesh" is the value aur name ko as string process kiya jayega aur name ke badle empty bhi rakh sakte hai(:)
+    "full name": "Hitesh Choudhary",
+    mySym1: "mykey1",
+    [mySym2]: "mykey2",
+    age: 18,
+    location: "Jaipur",
+    email: "hitesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
+}
+
+
+// console.log(JsUser.email) // one way to access the value of object
+// console.log(JsUser["email"]) // another way to access the value of object; email written in quotes as key is stored as string
+// console.log(JsUser["full name"]) // "full name" cannt be accessed using dot notation as it has a space in it, so we have to use bracket notation
+                                      // agar name quotes mai hota to use dot notation se access kar sakte he 
+ // console.log(typeof JsUser[mySym1]) // typeof here for [] is undefined, whereas typeof JsUser.mySym1 will return string as mySym1 is a string value
+ // console.log(typeof JsUser[mySym2]) //  accessing the value of mySym2 using bracket notation as it is a symbol and cannot be accessed using dot notation
+// typeof JsUser.mySym2 // will return string as mySym1 is a string value
+JsUser.email = "hitesh@chatgpt.com"
+// Object.freeze(JsUser)
+JsUser.email = "hitesh@microsoft.com"
+// console.log(JsUser);
+
+// obj functions
+JsUser.greeting = function(){
+    console.log("Hello JS user"); // Object.freeze does not allow .greeting to run
+}
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user, ${this.name}`); // using this keyword to access the name property of the object
+}
+
+console.log(JsUser.greeting); // Function execute nahi hua he bas uska reference mila he. aage age kaam ayega
+
+console.log(JsUser.greeting(), JsUser.greetingTwo()); // calling the functions
+// console.log(JsUser.greetingTwo());
