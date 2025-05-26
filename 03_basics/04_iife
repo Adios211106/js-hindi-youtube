@@ -1,0 +1,18 @@
+// Immediately Invoked Function Expressions (IIFE)
+// IIFE is a function that runs as soon as it is defined and so that global scope's variables do not pollute function scope
+
+
+(function chai(){
+    // named IIFE
+    console.log(`DB CONNECTED`);
+})(); // ";" is used to end context as without it, function keeps running aur niche vala fuction nahi run hota hai
+
+    // name is parameter
+( (name) => { // simple IIFE
+    console.log(`DB CONNECTED TWO ${name}`);
+} )('hitesh'); // passing argument to IIFE
+
+// simple IIFE with default value
+( (name = "by Aditya") => { // "by Aditya" is default value,if no argument is passed, it will take this value
+    console.log(`DB CONNECTED TWO ${name}`);
+} )('hitesh');

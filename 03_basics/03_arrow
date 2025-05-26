@@ -1,0 +1,56 @@
+const user = {
+    username: "hitesh",
+    price: 999,
+
+    welcomeMessage: function() {
+        console.log(`${this.username} , welcome to website`); // this is used for current context (here, hitesh)
+        console.log(this);
+    }
+
+}
+
+// user.welcomeMessage()
+// user.username = "sam" // context changed
+// user.welcomeMessage()
+
+// console.log(this); // in node environment, in this example there is no global object so output is {} ; in browser, global obj will be window object
+
+// function chai(){
+//     let username = "hitesh"
+//     console.log(this.username); // output will be undefined in node environment, in browser it will be window.username 
+// } // this is not used here
+
+// chai()
+
+// const chai = function () {
+//     let username = "hitesh"
+//     console.log(this.username); // output will be undefined in node environment, in browser it will be window.username
+// } // idhar bhi this ka use nahi hai, function expression keliye
+
+const chai =  () => { // 
+    let username = "hitesh"
+    console.log(this.username); // output will be undefined in node environment, in browser it will be window.username
+    console.log(this); // output will be {} in node environment, in browser it will be window object
+}
+
+
+ chai()
+
+// const addTwo = (num1, num2) => {
+//     return num1 + num2
+// }
+
+// const addTwo = (num1, num2) =>  num1 + num2 // implicit return, no need for return keyword
+
+// const addTwo = (num1, num2) => ( num1 + num2 ) // implicit return, no need for return keyword, but brackets are used to group the expression
+
+const addTwo = (num1, num2) => ({username: "hitesh"}) // implicit return, no need for return keyword, but brackets are used to return an object
+
+
+console.log(addTwo(3, 4))
+
+
+const myArray = [2, 5, 3, 7, 8]
+
+myArray.forEach(function () {})
+myArray.forEach( () => {}) // forEach is a method of array, it takes a callback function as an argument
