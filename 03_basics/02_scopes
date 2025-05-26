@@ -1,0 +1,63 @@
+var c = 300 // video dekhle (5:05)
+let a = 300
+// {} ko scope bolte hai jab vo functions, ya if-else aur other loops ke context mai bola jaata hai
+if (true) { // {} iske andar jo likha hai use kehte hai block scope, bahar vale ko global scope 
+    let a = 10 
+    const b = 20
+    var c = 10 // or c = 10 ; isko log karke execute karne ke baad issue pata chalega (andar ka c ka value ayega log s jo nahi aana chahiye isilye var nahi use karra jata) 
+    console.log("INNER: ", a);
+} // bloc scpe se bahar leak nahi honi chahiye chize bas; as function global scope ke chize {} andar access ki jaaki sakti hai
+
+
+
+// console.log(a);
+// console.log(b); // ye execute hi nahi hoga as log global mai likha hai, or let a = 300 aise bahar bhi nahi define karra hai
+// let aur const similar (scope basis pe) hai bas var ka issue hai 
+// console.log(c);
+
+// browser ke console vala scope (core scope) aur code environment mai present node se run kiya gaya scope alag hai 
+
+/////Nested scopes (Closure ka video english channel mai hai, yaha pai basic discuss kiya hai)///////
+//  child fuction can access elements of parent function (due to scope) but ulta nahi ho sakta
+function one(){
+    const username = "hitesh"
+
+    function two(){
+        const website = "youtube"
+        console.log(username);
+    }
+    // console.log(website);
+
+     two()
+
+}
+
+one()
+
+if (true) {
+    const username = "hitesh"
+    if (username === "hitesh") {
+        const website = " youtube"
+        // console.log(username + website);
+    }
+    // console.log(website);
+}
+
+// console.log(username); //global scope mai hai
+
+
+// ++++++++++++++++++ interesting ++++++++++++++++++
+// Hoisting
+
+console.log(addone(5)) // ye execute hoga
+
+function addone(num){
+    return num + 1
+}
+
+
+
+console.log(addTwo(5)) // ye execute nahi hoga declaration ke pehle (addTwo const/variable mai rakha hai (hoisting))
+const addTwo = function(num){ // addTwo is expression (variable/const with funcn)
+    return num + 2
+}
