@@ -4,7 +4,7 @@ function sayMyName(){ // function ka scope ya fir defn {} iske andar likhte hai
     console.log("I");
     console.log("T");
     console.log("E");
-    console.log("SSS");
+    console.log("S");
     console.log("H");
 }
 
