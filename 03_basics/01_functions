@@ -34,7 +34,7 @@ function loginUserMessage1(username){
 // console.log(loginUserMessage1()); // output: undefined just logged in
 
 function loginUserMessage2(username) {
-    if(!username) { // if(!username) is equivvalent to (username === undefined) or (username === "") as if(undefined),if("") have false values present inside them
+    if(!username) { // if(!username) is equivalent to (username === undefined) or (username === "") as if(undefined),if("") have false values present inside them
        console.log("Please enter a username.")
        return // taki niche wali line na execute ho
     }
@@ -67,18 +67,18 @@ function calculateCartPrice(val1, val2, ...num1){ // ...num1 is a rest operator 
 
 const user = {
     username: "hitesh",
-    prices: 199
+    price: 199
 }
 
 function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-// handleObject(user)
-handleObject({
-    username: "sam",
-    price: 399
-})
+handleObject(user)
+ handleObject({
+     username: "sam",
+     price: 399
+ })
 
 const myNewArray = [200, 400, 100, 600]
 
