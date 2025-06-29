@@ -22,7 +22,7 @@ function addTwoNumbers(number1, number2){ // (3, "4") => 34, (3, null) => 3, (3,
     return number1 + number2 // saves space intstead of writing let result
 }
 
-const result = addTwoNumbers(3, 5) // ye reuslt aur funcn mai jo result hai vo dono alag chise hai (scope) 
+const result = addTwoNumbers(3, 5) // ye result aur funcn mai jo result hai vo dono alag chise hai (scope) 
 
 // console.log("Result: ", result); // log karne ke baad hi print hoga nahi to bas return karega with no printing
 
