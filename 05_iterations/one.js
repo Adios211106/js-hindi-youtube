@@ -47,3 +47,8 @@ for (let index = 1; index <= 20; index++) {
    console.log(`Value of i is ${index}`);
     
 }
+
+//  continue skips the current iteration and moves to the next one whereas break exits the loop entirely.
+
+// Note: Cmd + D to select multiple occurrences of a word in VS Code (like "index" in a for loop) for simultaneous editing.
+//.      Also, Shift + Alt + Down/Up Arrow to duplicate lines up or down.
