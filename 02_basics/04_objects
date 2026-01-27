@@ -5,7 +5,7 @@ tinderUser.id = "123abc"
 tinderUser.name = "Sammy"
 tinderUser.isLoggedIn = false
 
-// console.log(tinderUser);
+ console.log(tinderUser);
 
 const regularUser = {
     email: "some@gmail.com",
@@ -17,18 +17,19 @@ const regularUser = {
     }
 }
 
-// console.log(regularUser.fullname.userfullname.firstname);
-// console.log(regularUser.fullname?.userfullname.firstname); // ? is used for security reasons to check if fullname exists or noot, nahi to if loops lagane padte hai
+ console.log(regularUser.fullname.userfullname.firstname);
+console.log(regularUser.fullname?.userfullname.firstname); // ? is used for security reasons to check if fullname exists or noot, nahi to if loops lagane padte hai
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 
-// const obj3 = { obj1, obj2 }
-// const obj3 = Object.assign({}, obj1, obj2, obj4) //  Check Object.assign() on mdn (direct (obj1, obj2, obj4) likha to bhi chalega bas obj 1 mai jayega sab)
+let obj3 = { obj1, obj2 }
+obj3 = Object.assign({}, obj1, obj2, obj4) //  Check Object.assign() on mdn (direct (obj1, obj2, obj4) likha to bhi chalega bas obj 1 mai jayega sab)
+console.log(obj3);
 
-const obj3 = {...obj1, ...obj2} // spread (same as arr)
-// console.log(obj3);
+obj3 = {...obj1, ...obj2} // spread (same as arr)
+console.log(obj3);
 
 
 const users = [
@@ -46,7 +47,7 @@ const users = [
     },
 ]
 
-console.log(users[1].email); // 1st obj inside users object
+console.log(users[0].email); // 1st obj inside users object
 
 console.log(tinderUser);
 
@@ -66,7 +67,7 @@ const course = {
 
 // course.courseInstructor ke badle ⬇
 
-const {courseInstructor: instructor} = course
+const {courseInstructor: instructor} = course // Object Destructuring with Aliasing (renaming)
 
 // console.log(courseInstructor);
 console.log(instructor);
@@ -87,7 +88,7 @@ navbar(company = "hitesh")
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
-// ye upar json ko object mai convert karke fir values nikal sakte hai
+// ye upar json ko object mai convert karke fir values nikal sakte hai // JSON.parse() method se
 
 // Array ke form mai APIs
 [
@@ -96,4 +97,4 @@ navbar(company = "hitesh")
     {}
 ]
 
-// randomyuser.api , jsonformatter ka part yt videos se dekh (4:31:16)
+// randomuser.me api , jsonformatter ka part yt videos se dekh (4:31:16)

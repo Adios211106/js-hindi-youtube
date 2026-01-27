@@ -11,8 +11,8 @@ myArr1.shift() // remooves first value from an array
 // console.log(myArr1.indexOf(7));
 const newArr = myArr.join()
 // console.log(myArr);
-// console.log(newArr);
-// console.table([typeof myArr, typeof newArr])
+console.log(newArr);
+console.table([typeof myArr, typeof newArr])
 
 // slice n splice
 const Arr1 = [1, 2, 3, 4, 5, 6]
