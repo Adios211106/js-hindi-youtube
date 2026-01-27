@@ -14,7 +14,7 @@ let createdDate2= new Date(2025, 1, 21, 3, 33, 40) // (Year, Month, Date, (3,33,
 //console.log(createdDate2.toLocaleString());
 
 let createdDate3 = new Date("2024-1-30") // or "30-1-2024" is fine too same output
-//console.log(createdDate3.toLocaleString());
+console.log(createdDate3.toLocaleString());
 
 let Timestamp = Date.now()
 // console.log(Timestamp); // Gives no. of milliseconds occured from 1/1/1970 (Standard defined)

@@ -1,8 +1,8 @@
 
-// console.log("2" > 1)
+// console.log("2" > 1) // comparing values from inside a string with a number
 // console.log("2" > null)
 // console.log(null == 0)
-console.log(null <= 0)
+// console.log(null <= 0)
 // console.log(undefined === null)
 // console.log(undefined > 0)
 // console.table([undefined == 0, "03" === 3])

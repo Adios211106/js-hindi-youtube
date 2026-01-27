@@ -1,12 +1,12 @@
 const num1 = 1100.980
 const num2 = new Number(200.9458)
-// console.log(num1);
-// console.log(num2);
-// console.table([typeof(num1), typeof(num2)]);
-// console.log(num1.toString().length);
-// console.log(num2.toFixed(1));
-// console.log(num2.toPrecision(5));
-// console.log(num1.toPrecision(3));
+console.log(num1);
+console.log(num2);
+console.table([typeof(num1), typeof(num2)]);
+console.log(num1.toString().length);
+console.log(num2.toFixed(1));
+console.log(num2.toPrecision(5));
+console.log(num1.toPrecision(3));
 const hundreds = 100000000
 // console.log(hundreds.toLocaleString('en-IN'))
 /***************************+ Maths +***************************************/
@@ -16,8 +16,8 @@ const n = 100.5
 // console.log(Math.sqrt(Math.ceil(n)));
 console.log(Math.floor(Math.random()*10 + 1)); // Random values between 0 and 1
 
-const max = 10
-const min = 20
+const max = 20
+const min = 10
 console.log(Math.floor(Math.random() * (max - min + 1) + min));
 
 
