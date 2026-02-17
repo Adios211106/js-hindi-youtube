@@ -43,7 +43,7 @@ if (true) {
     // console.log(website);
 }
 
-// console.log(username); //global scope mai hai
+// console.log(username); //global scope mai hai(aing?)
 
 
 // ++++++++++++++++++ interesting ++++++++++++++++++

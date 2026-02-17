@@ -3,21 +3,21 @@ const user = {
     price: 999,
 
     welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`); // this is used for current context (here, hitesh)
+        console.log(`${this.username} , welcome to website`); // this is used for current context (here, hitesh as it is global scope, but if we change the context, it will change the value of this)
         console.log(this);
     }
 
 }
 
-// user.welcomeMessage()
-// user.username = "sam" // context changed
-// user.welcomeMessage()
+user.welcomeMessage()
+user.username = "sam" // context changed
+user.welcomeMessage()
 
 // console.log(this); // in node environment, in this example there is no global object so output is {} ; in browser, global obj will be window object
 
 // function chai(){
 //     let username = "hitesh"
-//     console.log(this.username); // output will be undefined in node environment, in browser it will be window.username 
+//     console.log(this.username); // output will be undefined in node environment, in browser it will be window.username because in browser, global scope is window object and this will refer to that, but in node environment, there is no global object so this will be undefined
 // } // this is not used here
 
 // chai()
@@ -53,4 +53,6 @@ console.log(addTwo(3, 4))
 const myArray = [2, 5, 3, 7, 8]
 
 myArray.forEach(function () {})
-myArray.forEach( () => {}) // forEach is a method of array, it takes a callback function as an argument
+myArray.forEach( () => {}) // forEach is a method of array, it takes a callback function as an argument so here we can use arrow function as a callback function
+
+// this keyword is not used in arrow function as it does not have its own this, it takes this from the surrounding context (lexical this) ; so in above example, this will refer to global object (window in browser, {} in node environment) and not to the array or the function itself
