@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai and Code</h1>
+    <button id="btn">Stop</button>
+</body>
+<script>
+    const sayAdi = function(){
+        console.log("Adi");
+    }
+    setTimeout(sayAdi, 2000) // giving reference of handler and not executing it (i.e., sayAdi instead of sayAdi()) 
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+const changeH1 = setTimeout(changeText, 2000)
+
+const stop = document.getElementById('btn').addEventListener('click', () => {
+    clearTimeout(changeH1)
+})
+</script>
+</html>
